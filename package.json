@@ -9,5 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+     "@tinyhttp/app": "^2.0.29"
   }
 }
