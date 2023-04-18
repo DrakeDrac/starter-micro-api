@@ -1,6 +1,12 @@
-var http = require('http');
-http.createServer(function (req, res) {
-    console.log(`Just got a request at ${req.url}!`)
-    res.write('Yo!');
-    res.end();
-}).listen(process.env.PORT || 3000);
+import { App } from "@tinyhttp/app";
+
+const app = new App();
+
+app
+  .use(json())
+  .post("/", (req, res) => {
+    console.log(req.body);
+
+    res.send(`hehe`);
+  })
+  .listen(process.env.PORT || 3000);
