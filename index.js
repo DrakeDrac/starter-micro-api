@@ -4,7 +4,6 @@ import { json } from "milliparsec";
 const app = new App();
 
 app
-  .use(json())
   .post("/", (req, res) => {
     console.log(req.body);
 
